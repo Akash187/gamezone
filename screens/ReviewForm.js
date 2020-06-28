@@ -26,8 +26,8 @@ const ReviewForm = ({addReview}) => {
         initialValues={{title: '', body: '', rating: ''}}
         validationSchema={reviewSchema}
         onSubmit={(values, actions) => {
-          addReview(values)
           actions.resetForm()
+          addReview(values)
         }}
       >
         {(props) => (

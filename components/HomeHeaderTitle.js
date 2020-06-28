@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   homeHeader: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center'
   },
   homeHeaderImage: {
