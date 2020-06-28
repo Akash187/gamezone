@@ -4,6 +4,7 @@ import React from "react"
 import ReviewDetails from "../screens/ReviewDetails"
 import { Animated } from 'react-native'
 import DrawerIcon from "../shared/DrawerIcon";
+import HomeHeaderTitle from "../components/HomeHeaderTitle";
 
 const Stack = createStackNavigator()
 
@@ -33,13 +34,18 @@ function HomeStack({ navigation }) {
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: { backgroundColor: 'tomato' },
+        headerTitleStyle: {
+          color: 'white',
+          fontSize: 24,
+          fontWeight: '500'
+        }
       }}
     >
       <Stack.Screen
         name="Home"
         component={Home}
         options={{
-          title: 'GameZone',
+          headerTitle: () => <HomeHeaderTitle/>,
           headerLeft: () => <DrawerIcon/>
         }}
       />
